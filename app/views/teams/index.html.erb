@@ -1,1 +1,9 @@
 <h1>This is the Teams Index page!</h1>
+
+<%= link_to "Add a team profile", new_team_path %>
+</br>
+  <div>
+    <% @teams.each do |team| %>
+      <%= link_to team.name, team %>
+    <% end %>
+  </div>

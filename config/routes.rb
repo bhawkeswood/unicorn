@@ -4,6 +4,8 @@ Unicorn::Application.routes.draw do
 
   resources :teams
 
+  root 'teams#index'
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 

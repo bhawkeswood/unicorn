@@ -3,7 +3,7 @@
     <div class="error messages">
       <h2>Whoops! Please double check that...</h2>
       <ul>
-        <% for message in @ user.errors.full_messages %>
+        <% for message in @user.errors.full_messages %>
           <li><%= message %></li>
         <% end %>
       </ul>

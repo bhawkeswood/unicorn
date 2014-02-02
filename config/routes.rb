@@ -1,10 +1,14 @@
 Unicorn::Application.routes.draw do
-  get "sessions/new"
-  get "users/new"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  get "logout" => "sessions#destroy", :as => "logout"
+  get "login" => "sessions#new", :as => 'login'
+  get "signup" => "users#new", :as => "signup"
+  
   resources :teams
+  resources :users
+  resources :sessions
 
   root 'teams#index'
 

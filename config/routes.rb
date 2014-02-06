@@ -10,7 +10,7 @@ Unicorn::Application.routes.draw do
   resources :users
   resources :sessions
 
-  root 'teams#index'
+  root 'sessions#new'
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

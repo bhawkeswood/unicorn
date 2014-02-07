@@ -1,6 +1,6 @@
 html,
 body {
-    width:100%; /* Needed to avoid a redrawing bug in Firefox when resizing windows */
+    width:98%; /* Needed to avoid a redrawing bug in Firefox when resizing windows */
     height:100%;
 }
 
@@ -24,16 +24,15 @@ body {
   box-flex:1;
   margin:0, auto;
 	width:auto;
-	/*background-color:#71eeb8;*/
 }
 	
 .topframe {
 	border:1px solid #666;
-	-moz-box-shadow: 3px 4px 3px rgba(0,0,0,0.5);
-	-webkit-box-shadow: 3px 4px 3px rgba(0,0,0,0.5);
-	box-shadow: 3px 4px 3px rgba(0,0,0,0.5);/*This line sets the dropshadow!*/
-	border-radius:10px;
-	height:50px;
+	-moz-box-shadow: 3px 2px 2px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 3px 2px 2px rgba(0,0,0,0.3);
+	box-shadow: 3px 2px 2px rgba(0,0,0,0.3);/*This line sets the dropshadow!*/
+	/*border-radius:10px;*/
+	height:60px;
 	width:100%;
 	position:absolute; top: 0; left: 0;
 }
@@ -67,7 +66,7 @@ body {
 	-moz-box-shadow: 3px 4px 3px rgba(0,0,0,0.5);
 	-webkit-box-shadow: 3px 4px 3px rgba(0,0,0,0.5);
 	box-shadow: 3px 4px 3px rgba(0,0,0,0.5);/*This line sets the dropshadow!*/
-	border-radius:10px;
+	/*border-radius:10px;*/
 	height:50px;
 	width:100%;
 	position:absolute; bottom: 0; left: 0;
@@ -75,10 +74,13 @@ body {
 	
 .bottomtext {
 	font-size:24px;
-	color:#999999;
-	text-shadow: 0px 2px 3px #000;
+	margin-top: 7px;
 }
 	
+#menu-css {
+	margin-top: 14px;
+}
+
 #menu-css li {
   display: inline;  
   list-style: none;
@@ -88,14 +90,14 @@ body {
 #menu-css li a {  
   
 	/* Border Radius */  
-	-webkit-border-radius: 10px;  
+	/*-webkit-border-radius: 10px;  
 	-moz-border-radius: 10px;  
-	border-radius: 10px;  
+	border-radius: 10px;*/  
 
 	/* Border Shadow */   
-	-webkit-box-shadow: 1px 2px 2px rgba(0,0,0,0.6);  
-	-moz-box-shadow: 1px 2px 2px rgba(0,0,0,0.6);  
-	box-shadow: 1px 2px 2px rgba(0,0,0,0.6); 
+	-webkit-box-shadow: 1px 0px 1px rgba(0,0,0,0.6);  
+	-moz-box-shadow: 1px 0px 1px rgba(0,0,0,0.6);  
+	box-shadow: 1px 0px 1px rgba(0,0,0,0.6); 
 
 	color: #ffffff;  
 	background: rgba(0,0,0,0.2);  
@@ -132,9 +134,9 @@ body {
   
 #menu-css li a {  
   /* Border Radius */ 
-  -webkit-border-radius: 10px;  
+  /*-webkit-border-radius: 10px;  
   -moz-border-radius: 10px;  
-  border-radius: 10px;  
+  border-radius: 10px;  */
 
   /* Border Shadow */   
   -webkit-box-shadow: 1px 2px 2px rgba(0,0,0,0.7);  
@@ -178,8 +180,8 @@ body {
                                     support rgba */
     /*background: rgba(102, 102, 102, .2);*/
 	overflow:auto;
-	text-align:left;
-	position:fixed; top: 60px; left: 0;
+	text-align:center;
+	position:fixed; top: 30%; left: 0;
 } 
 	
 #frame li {
@@ -200,6 +202,8 @@ h3 {
 
 .greeting {
 	float: right;
+	padding-right: 15px;
+	padding-top: 2px;
 }
 
 .avatar {

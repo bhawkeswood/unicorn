@@ -14,10 +14,8 @@ body {
   display:box;
   box-pack:center;
   box-align:center;
-	background:url(images/darkwood.jpeg);	
-	font-family: 'Playfair Display', serif;	
-	margin-left:-0.1%;
-	display:inline-block;
+	background-color: linen;	
+	font-family: 'Playfair Display', serif;
 }
 
 #body {
@@ -35,8 +33,9 @@ body {
 	-webkit-box-shadow: 3px 4px 3px rgba(0,0,0,0.5);
 	box-shadow: 3px 4px 3px rgba(0,0,0,0.5);/*This line sets the dropshadow!*/
 	border-radius:10px;
-	height:70px;
+	height:50px;
 	width:100%;
+	position:absolute; top: 0; left: 0;
 }
 	
 #content {
@@ -48,8 +47,7 @@ body {
 	border-radius:10px;
 	height:580px;
 	width:auto;
-	background:url(images/vichy.png);
-	background-position:center;
+	text-align: left;
 	color:#999999; 
 }
 	
@@ -70,10 +68,8 @@ body {
 	-webkit-box-shadow: 3px 4px 3px rgba(0,0,0,0.5);
 	box-shadow: 3px 4px 3px rgba(0,0,0,0.5);/*This line sets the dropshadow!*/
 	border-radius:10px;
-	height:68px;
-	width:auto;
-	background:url(images/vichy.png);
-	background-position:bottom;
+	height:50px;
+	width:100%;
 	position:absolute; bottom: 0; left: 0;
 }
 	
@@ -83,7 +79,7 @@ body {
 	text-shadow: 0px 2px 3px #000;
 }
 	
-#menu-css li {  
+#menu-css li {
   display: inline;  
   list-style: none;
 	font-size:20px;
@@ -154,14 +150,14 @@ body {
   color: #ffffff;  
   background: rgba(0,0,0,0.3);  
   display: inline-block;  
-  padding: 5px 15px;  
+  padding: 3px 10px;  
   outline: none;  
   text-decoration: none;  
 }  
   
 #menu-css li a:hover {  
   background: rgba(0,0,0,0.5);  
-  padding: 5px 25px;  
+  padding: 3px 18px;  
 }  
   
 #menu-css li a:active {  
@@ -177,20 +173,17 @@ body {
 	font-size:22px;
 	color:#333333;
 	border-radius:10px;
-	float:right;
+	float:left;
 	/*background: rgb(102, 102, 102); /* Fall-back for browsers that don't
                                     support rgba */
     /*background: rgba(102, 102, 102, .2);*/
 	overflow:auto;
+	text-align:left;
+	position:fixed; top: 60px; left: 0;
 } 
 	
 #frame li {
 	line-height: 1.6;
-}
-	
-.nav {
-	text-align:right;
-	position:absolute; top: 0; left: 0; 
 }
 	
 .head {
@@ -206,5 +199,9 @@ h3 {
 }
 
 .greeting {
-float: right;
+	float: right;
+}
+
+.avatar {
+	float: right;
 }

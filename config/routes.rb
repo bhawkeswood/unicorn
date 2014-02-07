@@ -1,10 +1,16 @@
 Unicorn::Application.routes.draw do
 
+  get "oauths/oauth"
+  get "oauths/callback"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   get "logout" => "sessions#destroy", :as => "logout"
   get "login" => "sessions#new", :as => 'login'
   get "signup" => "users#new", :as => "signup"
+  
+  post "oauth/callback" => "oauths#callback"
+  get "oauth/callback" => "oauths#callback" # for use with Github
+  get "oauth/:provider" => "oauths#oauth", :as => :auth_at_provider
   
   resources :teams
   resources :users

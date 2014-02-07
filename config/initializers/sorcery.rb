@@ -2,7 +2,7 @@
 # The default is nothing which will include only core features (password encryption, login/logout).
 # Available submodules are: :user_activation, :http_basic_auth, :remember_me,
 # :reset_password, :session_timeout, :brute_force_protection, :activity_logging, :external
-Rails.application.config.sorcery.submodules = []
+Rails.application.config.sorcery.submodules = [:external]
 
 # Here you can configure each submodule's features.
 Rails.application.config.sorcery.configure do |config|
@@ -70,7 +70,7 @@ Rails.application.config.sorcery.configure do |config|
   # What providers are supported by this app, i.e. [:twitter, :facebook, :github, :linkedin, :xing, :google, :liveid] .
   # Default: `[]`
   #
-  # config.external_providers =
+  config.external_providers = [:google]
 
 
   # You can change it by your local ca_file. i.e. '/etc/pki/tls/certs/ca-bundle.crt'
@@ -120,10 +120,10 @@ Rails.application.config.sorcery.configure do |config|
   # config.github.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=github"
   # config.github.user_info_mapping = {:email => "name"}
   #
-  # config.google.key = ""
-  # config.google.secret = ""
-  # config.google.callback_url = "http://0.0.0.0:3000/oauth/callback?provider=google"
-  # config.google.user_info_mapping = {:email => "email", :username => "name"}
+  config.google.key = "AIzaSyBGte5eB0WuQ3DWs8GWmZIVhkZqxkP1S6M"
+  config.google.secret = "mwpxdv1pThVt73VhExrGRn5m"
+  config.google.callback_url = "https://localhost:3000/oauth/callback?provider=google"
+  config.google.user_info_mapping = {:email => "email", :username => "name"}
   #
   # config.vk.key = ""
   # config.vk.secret = ""
@@ -410,7 +410,7 @@ Rails.application.config.sorcery.configure do |config|
     # Class which holds the various external provider data for this user.
     # Default: `nil`
     #
-    # user.authentications_class =
+    user.authentications_class = Authentication
 
 
     # User's identifier in authentications class.

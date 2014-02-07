@@ -18,8 +18,9 @@
         <%= link_to "Myplaneteers", users_path %>
 
       <% else %>
-        <%= link_to "Sign up", signup_path %> or
-        <%= link_to "log in", login_path %>.
+        <%= link_to "Sign up", signup_path %> | 
+        <%= link_to "Log in", login_path %> | 
+        <%= link_to 'Login with Google', auth_at_provider_path(:provider => :google) %>
       <% end %>
     </div>
     <% flash.each do |name, msg| %>

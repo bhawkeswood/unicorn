@@ -4,3 +4,5 @@
 <p class="user_email">
   <%= @user.email %>
 </p>
+
+<%= link_to "Edit your profile", edit_user_path(current_user.id) %>

@@ -1,0 +1,17 @@
+<%= form_tag projects_path do %>
+  <div class="fields">
+    <%= label_tag :name %>
+    <%= text_field_tag :name, params[:name] %>
+  </div>
+  <div class="field">
+    <%= label_tag :description %>
+    <%= text_field_tag :description, params[:description] %>
+  </div>
+  <div class="field">
+    <%= label_tag :active %>
+    <%= check_box :active, params %>
+  </div>
+  <div class="actions">
+    <%= submit_tag "Let's go!" %>
+  </div>
+<% end %>

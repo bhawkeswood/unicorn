@@ -14,6 +14,8 @@ Unicorn::Application.routes.draw do
   
   resources :teams
   resources :users
+  resources :projects
+  resources :project
   resources :sessions
 
   root 'sessions#new'

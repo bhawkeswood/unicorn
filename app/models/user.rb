@@ -6,8 +6,10 @@ class User < ActiveRecord::Base
   has_many :authentications, :dependent => :destroy
   accepts_nested_attributes_for :authentications
 
-  has_many :teams
+  has_many   :teams
   belongs_to :teams
+  has_many   :projects
+  belongs_to :projects
 
   validates_confirmation_of :password
   validates_presence_of :password, :on => :create

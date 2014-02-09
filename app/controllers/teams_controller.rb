@@ -1,4 +1,5 @@
 class TeamsController < ApplicationController
+  before_filter :require_login
 
   def index
     @teams = Team.all

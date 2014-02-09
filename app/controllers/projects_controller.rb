@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_filter :require_login
   
   def index
     @projects = Projects.all
@@ -36,9 +37,6 @@ class ProjectsController < ApplicationController
 
   def destroy
   end
-
-  
-
 
   private
 

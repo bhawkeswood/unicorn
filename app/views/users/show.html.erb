@@ -1,2 +1,25 @@
 <%= @user.username %> | 
 <%= @user.email %>
+
+</br>
+<div class="skill_form">
+  <h2>Care to Add a New Skill?</h2>
+  <%= form_for @user do |f| %>
+    <%= f.fields_for :skill do |ff| %>
+      <div class="skill_fields">
+        <div class="field">
+          <%= ff.label :name %>
+          <%= ff.text_field :name %>
+        </div>
+        <div class="field">
+          <%= ff.label :current_rating %>
+          <%= ff.number_field :current_rating %>
+        </div>
+        <div class="field">
+          <%= ff.label :desired_rating %>
+          <%= ff.number_field :desired_rating %>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
